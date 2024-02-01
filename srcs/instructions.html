@@ -10,13 +10,16 @@
 </head>
 <body class="instructions">
     <div class="navbar">
-        <img src="pictures/icon.png">    
+        <a href="../index.html">
+            <img src="../srcs/pictures/icon.png" alt="Icon">
+        </a>
+        <p> G! Tara Na! </p>    
         <div class="right_side">
             <a href="../index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="instructions.html">How Does it Work</a>
+            <a href="../srcs/about.html">About</a>
+            <a href="../srcs/instructions.html">How Does it Work</a>
             <div class="icon_circle">
-                <a href="profile.html"> 
+                <a href="srcs/backend/login.php"> 
                 <i class="fa fa-user icon"></i>
                 </a>
             </div>
@@ -97,6 +100,7 @@
                 <p> When looking at a chord chart, you may see “X’s and “O”s above the thick black line that represents the nut of your guitar. It’s not a wonky version of Tic-Tac-Toe. Rather, it’s shorthand for which strings you should strum and which strings you should mute when playing a given chord.
                     An “X” above a string indicates that the string should be muted when strumming a chord. An “O” above a string means that the string should be played in the open position (without a finger on any of the frets aligned with that string) in a given chord. These shorthand notations of “X’s and “O’s can help you easily see which strings you’ll need to omit from a strumming pattern, which strings are played in an open position, as well as which strings need you to place a finger on a given fret in order to strum a specific chord.
                 </p>
+
                 <ul> 
                     <li id="finger_positions" onmouseover="setXString()" onmouseout="setBlankXOString()"> X’s - string should be muted </li>
                     <li id="finger_positions"  onmouseover="setOString()" onmouseout="setBlankXOString()"> O's - string should be open </li>
@@ -189,6 +193,32 @@
             <h1> THE RIGHT CHORD </h1>
         </div>     
         
+        
+    <div class="footer">
+        <div class="partnership_container">
+            <div class="partnership_txt">
+                <h3> In partnership of: </h3>
+            </div>
+            <div class="partners">
+                <a href="https://www.fender.com/">
+                    <img src="../srcs/pictures/logos/logo_fender.png" alt="Fender Logo"> </a>
+            
+                <a href="https://chordpic.com/">
+                    <img src="../srcs/pictures/logos/logo_ChordPic.png" alt="ChordPic Logo"> </a>
+            
+                <a href="https://www.instagram.com/republikha_ph/">
+                    <img src="../srcs/pictures/logos/logo_republikha.png" alt="Republikha Logo"> </a>
+            </div>
+        </div>
+        <div class="navpane">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../srcs/about.html">About</a></li>
+                <li><a href="../srcs/instructions.html">How it Works</a></li>
+                <li><a href="../srcs/login.php">Login</a></li>
+            </ul>
+        </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

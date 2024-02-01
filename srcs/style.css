@@ -2,6 +2,10 @@
 {
     background: radial-gradient(137.75% 126.4% at 50% 83.11%, #0A0F1B 36.47%, #08284C 92.71%);
 }**/
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
 
 body
 {
@@ -28,6 +32,7 @@ body.about
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin: 40px;
 }
 
 .right_side
@@ -35,6 +40,11 @@ body.about
     display: flex;
     align-items: center;
 }
+
+.right_side a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
 
 .navbar img
 {
@@ -66,29 +76,45 @@ body.about
 {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
     width: 100%;
-    align-items: top;
     /**width: fit-content;**/
 }
 
-/**.rightlandingpage
+.chords_container
 {
-    align-items: right;
-    justify-content: right;
-} **/
-
-/**.leftlandingpage
-{
-    justify-content: left;
+    height: 100vh;
+    margin-top: 100px;
 }
 
-.rightlandingpage
+.index h1, .about h1, .instructions_landing h1, 
+.right_side a, .music_player h1, .admin h1, .artist_info h2
 {
-    position: relative;
-    justify-content: flex-end;
-    max-width: 50%; 
-}**/
+    font-family: 'Jost';
+    color: #fff;
+}
+
+.header h2, .about h2, .instructions h2, .team h2, .team_profile h2
+{
+    font-family: 'Inter';
+    color: #fff;
+    font-size: 30px;
+
+}
+
+.about h3, .instructions h3
+{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.artist_info p, .about p, .instructions p
+{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+
+}
 
 .header h1
 {
@@ -324,13 +350,15 @@ h1, h2,h3, p
 
 .wrapper
 {
-    box-sizing: content-box;
+    /**box-sizing: content-box;**/
     height: 70px;
     padding: 50px 30px;
     display: flex;
+    text-align: center;
 }
 
-.aboutwords
+
+.wrapper span
 {
     display: block;
     height: 100%;
@@ -366,6 +394,12 @@ h1, h2,h3, p
 .words
 {
     overflow: hidden;
+}
+
+.words .aboutwords
+{
+    color: #000000;
+    font-family: 'Jost';
 }
 
 .about_landing h1
@@ -427,15 +461,12 @@ h1, h2,h3, p
 .team
 {
     width: 100%;
-    height: 250px;
+    height: fit-contents;
     background: #1E647E;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 10px;
-}
-
-.team h2, p
-{
-    text-align: left;
+    text-align: center;
+    justify-content: center;
 }
 
 .team_profile
@@ -510,13 +541,20 @@ h1, h2,h3, p
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #FFF;
-    width: 300px;
+    width: fit-content;
     height: 50px;
     flex-shrink: 0;
-    padding: 5px;
     background: #1E647E;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);   
+    padding: 15px; 
+}
+
+.fender a
+{
+    color: #FFF;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 #fender
@@ -532,7 +570,10 @@ h1, h2,h3, p
     height: fit-content;
     width: 100%;
     display: flex;
-    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 .instructions_readchordchart h3
@@ -548,8 +589,7 @@ h1, h2,h3, p
 
 #musicnotes
 {
-    width: 249px;
-    height: 380px;
+    height: 300px;
     flex-shrink: 0;
 }
 
@@ -752,7 +792,6 @@ body.admin
 
 .admin h1
 {
-    color: #fff;
     margin-top: 20px;
 }
 
@@ -791,6 +830,12 @@ body.admin
     display: flex;
     text-align: right;
     justify-content: space-between;
+}
+
+.footer h3
+{
+    font-family: 'Jost';
+    color: #000000;
 }
 
 
