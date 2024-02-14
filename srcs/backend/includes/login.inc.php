@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die();
         }
 
-        header("Location: ../hero.php?login=success");
+        header("Location: ../../profile.php");
 
         $pdo = null;
         $statement = null;

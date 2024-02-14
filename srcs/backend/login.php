@@ -16,7 +16,7 @@ require_once "includes/login_view.inc.php";
 <body class="profile">
     
     <div class="navbar">
-        <a href="../../index.html">
+        <a href="../../index.php">
             <img src="../../srcs/pictures/icon.png" alt="Icon">
         </a>
         <p> G! Tara Na! </p>      
@@ -39,13 +39,16 @@ require_once "includes/login_view.inc.php";
                     </div>
                     <button type="submit">Login</button>
                 </form>
+                <a href="register.php">
+                        <button type="submit">Sign Up</button>
+                    </a>
                 <?php
                 check_login_errors();
                 ?>
                 <img src="../pictures/11.png">
-                <div>
+                <!--<div>
                     <a href="register.php">Sign Up!</a>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>

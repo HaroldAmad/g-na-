@@ -7,20 +7,20 @@
     <link rel="stylesheet" type="text/css" href = "srcs/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="index">
     <div class="navbar">
-        <a href="index.html">
+        <a href="index.php">
             <img src="srcs/pictures/icon.png" alt="Icon">
         </a>
         <p> G! Tara Na! </p>    
         <div class="right_side">
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             <a href="srcs/about.html">About</a>
             <a href="srcs/instructions.html">How Does it Work</a>
             <div class="icon_circle">
@@ -66,23 +66,51 @@
                 </div>
             </div>
         
-            <div class="box_clickable">
+            <div class="box_clickable"  id="feedbackDiv" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <h2> WRITE US A </h2>
                 <h1> FEEDBACK </h1>
             </div>        
         </div>
 
+        <div class="feedback_modal">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> RATE US!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="picture">Upload Picture:</label><br>
+                        <input type="file" id="picture" name="picture"><br><br>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="feedback">Feedback:</label><br>
+                        <textarea id="feedback" name="feedback"></textarea><br><br>
+                        <label for="rate">Rate:</label><br>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="modal-footer" type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
         <div class="rightlandingpage">
             <div class="placeholderpic_container">
-                <img id="pic1" src="srcs/pictures/placeholderpic.png" alt="">
+                <a href="srcs/profile.html">About
+                    <img  id="pic1" src="srcs/pictures/placeholderpic.png" alt="">
+                </a>
                 <img id="pic2" src="srcs/pictures/placeholderpic1.jpeg" alt="">  
             </div>
         </div>
 
     </div>
-
+    <h1 id="subtitle"> Guitar Chord Checker </h1> 
     <div class="chordchecker_container" id="chord_checker">
-        <h1> Guitar Chord Checker </h1> 
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <button class="nav-link active" id="nav-majorchords-tab" data-bs-toggle="tab" 
@@ -105,6 +133,11 @@
                           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+
                         </div>
                         <div class="carousel-inner">
                           <div id="chord_carousel-item" class="carousel-item active">
@@ -128,7 +161,40 @@
                                 <audio id="C-Major_audioPlayer"></audio>
                                 <i class="fa fa-play-circle icon"></i>
                             </div>
-                            </div>          
+                            </div>    
+                            
+                            <div id="chord_carousel-item" class="carousel-item">
+                                <img id="chorddiagram" src="srcs/chords/majors/d.svg" class="d-block w-100" alt="...">
+                                <div id="D-Major_playButton" class="clickable">
+                                    <audio id="D-Major_audioPlayer"></audio>
+                                    <i class="fa fa-play-circle icon"></i>
+                                </div>
+                            </div>
+
+                            <div id="chord_carousel-item" class="carousel-item">
+                                <img id="chorddiagram" src="srcs/chords/majors/E.svg" class="d-block w-100" alt="...">
+                                <div id="E-Major_playButton" class="clickable">
+                                    <audio id="E-Major_audioPlayer"></audio>
+                                    <i class="fa fa-play-circle icon"></i>
+                                </div>
+                            </div>
+
+                            <div id="chord_carousel-item" class="carousel-item">
+                                <img id="chorddiagram" src="srcs/chords/majors/F.svg" class="d-block w-100" alt="...">
+                                <div id="F-Major_playButton" class="clickable">
+                                    <audio id="F-Major_audioPlayer"></audio>
+                                    <i class="fa fa-play-circle icon"></i>
+                                </div>
+                            </div>
+
+                            <div id="chord_carousel-item" class="carousel-item">
+                                <img id="chorddiagram" src="srcs/chords/majors/G.svg" class="d-block w-100" alt="...">
+                                <div id="G-Major_playButton" class="clickable">
+                                    <audio id="G-Major_audioPlayer"></audio>
+                                    <i class="fa fa-play-circle icon"></i>
+                                </div>
+                            </div>
+
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -140,15 +206,46 @@
                         </button>
                       </div>
                 </div>
-                
                 <div class="chordchecker_content">
-                    <h2> Play your guitar </h2>
-                    <p> Hit the mic button then play your guitar to test if it is the accurate chord! </p>
-                    <i class="fa fa-microphone icon"></i>
+                    <div class="chords">
+                        <h2> Major Guitar Chords </h2>
+                        <button id="majorchords" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"> A </button>
+                        <button id="majorchords" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"> B </button>
+                        <button id="majorchords" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"> C </button>
+                        <button id="majorchords" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"> D </button>
+                        <button id="majorchords" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"> E </button>
+                        <button id="majorchords" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"> F </button>
+                        <button id="majorchords" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"> G </button>
+                    </div>
+                    
+                    <div class="checker"> 
+                        <h2> Play your guitar </h2>
+                        <p> Hit the mic button then play your guitar to test if it is the accurate chord! </p>
+                        <i class="fa fa-microphone icon"></i>
+                    </div>
+
+                    <div class="checked_results">
+                        <div class="correct results">
+                            <i class="fa fa-check-circle icon"></i>
+                            <div>
+                                <h3> Correct </h3>
+                                <p> you are playing the right chord </p>
+                            </div> 
+                        </div>
+
+                        <div class="incorrect results">
+                            <i id="icon_wrong" class="fa fa-times-circle icon"></i>
+                            <div>
+                                <h3>Incorrect </h3>
+                                <p> you are playing the wrong chord </p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             </div>
-
             <div class="tab-pane fade p-3" id="nav-minorchords" role="tabpanel"
             aria-labelledby="nav-minorchords-tab">
 
@@ -156,11 +253,9 @@
         </div>
     </div>
     
-    <div>
-        <h1> Testimonials </h1>
-    </div>
+
+    <h1> Testimonials </h1>
    <div class="testimonial_container">
-    
     <div class="vinyl_container"> <img class="vinyl" src="srcs/pictures/vinyl.png" alt=""> </div>
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
@@ -250,9 +345,9 @@
             </ul>
         </div>
     </div>
-
     <script src="srcs/scripts/rotate.js"></script>
     <script src="srcs/scripts/chordplayer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

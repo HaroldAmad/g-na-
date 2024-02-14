@@ -12,13 +12,3 @@ function get_user(object $pdo, string $username)
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
 }
-
-function get_info(object $pdo, string $userId)
-{
-    $query = "SELECT username FROM users WHERE user_id = :user_id;";
-    $stmt = $pdo->prepare($query);
-    $stmt->bindParam(":user_id", $userId);
-    $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    return $result;
-}

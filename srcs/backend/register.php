@@ -15,7 +15,7 @@ require_once 'includes/signup_view.inc.php';
 <body class="profile">
         
     <div class="navbar">
-        <a href="../../index.html">
+        <a href="../../index.php">
             <img src="../../srcs/pictures/icon.png" alt="Icon">
         </a>
         <p> G! Tara Na! </p>      
